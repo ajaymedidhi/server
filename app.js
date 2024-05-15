@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Error connecting to MongoDB:', err));
 
-app.use('/auth', authRoutes);
+app.use('/', authRoutes);
 app.use('/contact', contactRoutes); 
 
 const PORT = process.env.PORT || 3000;
